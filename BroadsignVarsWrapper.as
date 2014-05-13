@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-package es.ntwk.broadsign.flashvars.domain
-=======
 package
->>>>>>> FETCH_HEAD
-=======
-package
->>>>>>> FETCH_HEAD
 {
 	import mx.utils.ObjectProxy;
 	
@@ -47,12 +39,5 @@ package
 				initialize(obj);		
 		}
 	}
-<<<<<<< HEAD
-<<<<<<< HEAD
+	
 }
-=======
-}
->>>>>>> FETCH_HEAD
-=======
-}
->>>>>>> FETCH_HEAD
