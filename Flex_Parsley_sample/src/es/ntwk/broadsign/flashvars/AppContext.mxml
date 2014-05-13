@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Objects
+	xmlns="http://www.spicefactory.org/parsley"
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:sf="http://www.spicefactory.org/parsley"  
+	
+	xmlns:domain="es.ntwk.broadsign.flashvars.domain.*"
+	xmlns:infrastructure="es.ntwk.broadsign.flashvars.infrastructure.*"
+	
+	
+	>
+	
+	<fx:Declarations>
+
+		<!-- load all config.ini parameters to AppModel paired vars -->
+		<domain:AppModel 
+			BSFV_DISPLAY_UNIT_ADDRESS="{properties.display_unit_address}"
+			BSFV_DISPLAY_UNIT_LOCATION_CODE="{properties.display_unit_location_code}"
+			BSFV_DISPLAY_UNIT_RESOLUTION="{properties.display_unit_resolution}"
+			BSFV_PLAYER_ID="{properties.player_id}"
+			BSFV_FRAME_ID="{properties.frame_id}"
+			BSFV_FRAME_RESOLUTION="{properties.frame_resolution}"
+			/>
+		
+		<!-- INFRASTRUCTURE -->
+		<infrastructure:AlertHandler/>
+		
+		<!-- DEBUG. Extended Parsley error log -->
+		<infrastructure:ParsleyErrorBroker />
+		
+	</fx:Declarations>
+	
+</Objects>
