@@ -1,28 +1,29 @@
 BroadSignFlashVars
 ==================
 
-Simple object wrapper that holds all the automatic FlashVars injected by BrowdSign Player on every SWF at runtime.
+Simple object wrapper that holds all the automatic FlashVars injected by BroadSign Player on every SWF at runtime.
 
 Flex implementation:
 
-Create a handler for the mx.events.FlexEvent.PREINITIALIZE event on the main Application. Must do it on preinit phase if you want to use some vars to set up the movie interface before start adding objects to the display list.
+Create a handler for the mx.events.FlexEvent.PREINITIALIZE event on the top Application container. Must do it on preinit phase if you want to use some vars to set up the movie interface before start adding objects to the display list.
 
 <pre>
-// add the preinitialize handler: 
+// add the preinitialize handler in the top Application container: 
+// ...
 // preinitialize="preinitializeHandler(event)" 
 
 
 	import mx.core.FlexGlobals;
 	import BroadsignVarsWrapper;
 			
-	// do this on pre-init 
+	// create the wrapper on pre-init 
 	protected function preinitializeHandler(event:FlexEvent):void
 	{
 		broadsignVarsWrapper = new BroadsignVarsWrapper(FlexGlobals.topLevelApplication.parameters);
 	}
 </pre>
 
-And then uset the instance vars...
+And then uset the wrapped falshvars...
 
 <pre>
 broadsignVarsWrapper.display_unit_address 
@@ -32,6 +33,6 @@ broadsignVarsWrapper.player_id
 broadsignVarsWrapper.frame_id 
 broadsignVarsWrapper.frame_resolution 
 </pre>
-(all automatic vars are String, so cast it to fit your needs)
 
+(all automatic vars are String, so cast it to fit your needs)
 
