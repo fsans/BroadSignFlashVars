@@ -7,7 +7,7 @@ Flex implementation:
 
 Create a handler for the mx.events.FlexEvent.PREINITIALIZE event on the main Application. Must do it on preinit phase if you want to use some vars to set up the movie interface before start adding objects to the display list.
 
-
+<pre>
 // add the preinitialize handler: 
 // preinitialize="preinitializeHandler(event)" 
 
@@ -20,16 +20,18 @@ Create a handler for the mx.events.FlexEvent.PREINITIALIZE event on the main App
 	{
 		broadsignVarsWrapper = new BroadsignVarsWrapper(FlexGlobals.topLevelApplication.parameters);
 	}
-			
+</pre>
+
 And then uset the instance vars...
 
+<pre>
 broadsignVarsWrapper.display_unit_address 
 broadsignVarsWrapper.display_unit_location_code 
 broadsignVarsWrapper.display_unit_resolution 
 broadsignVarsWrapper.player_id 
 broadsignVarsWrapper.frame_id 
 broadsignVarsWrapper.frame_resolution 
-
+</pre>
 (all automatic vars are String, so cast it to fit your needs)
 
 
