@@ -6,10 +6,7 @@
 	xmlns:sf="http://www.spicefactory.org/parsley"  
 	
 	xmlns:domain="es.ntwk.broadsign.flashvars.domain.*"
-	xmlns:infrastructure="es.ntwk.broadsign.flashvars.infrastructure.*"
-	
-	
-	>
+	xmlns:infrastructure="es.ntwk.broadsign.flashvars.infrastructure.*" >
 	
 	<fx:Declarations>
 
